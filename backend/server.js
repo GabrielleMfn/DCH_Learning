@@ -161,10 +161,7 @@ const swaggerOptions = {
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
 
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://ton-frontend-url.netlify.app'], // Ajoutera l'URL frontend plus tard
-  credentials: true
-}));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
