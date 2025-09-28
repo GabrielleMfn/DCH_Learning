@@ -1,0 +1,189 @@
+/* Admin Styles */
+.admin-link {
+  color: #f39c12 !important;
+  font-weight: 600;
+}
+
+.admin-login {
+  padding: 2rem 0;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.admin-dashboard {
+  padding: 2rem 0;
+  min-height: 80vh;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.admin-header h1 {
+  color: #333;
+  margin: 0;
+}
+
+.admin-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.admin-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.admin-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.formations-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.formation-admin-card {
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+
+.formation-admin-card:hover {
+  border-color: #667eea;
+}
+
+.formation-admin-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.formation-admin-card h3 {
+  margin: 0;
+  color: #333;
+  flex: 1;
+}
+
+.formation-status {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-badge.publie {
+  background: #28a745;
+  color: white;
+}
+
+.status-badge.brouillon {
+  background: #ffc107;
+  color: #333;
+}
+
+.formation-description {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.formation-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-warning {
+  background: #ffc107 !important;
+  color: #333 !important;
+}
+
+.btn-warning:hover {
+  background: #e0a800 !important;
+}
+
+.btn-success {
+  background: #28a745 !important;
+  color: white !important;
+}
+
+.btn-success:hover {
+  background: #218838 !important;
+}
+
+.btn-danger {
+  background: #dc3545 !important;
+  color: white !important;
+}
+
+.btn-danger:hover {
+  background: #c82333 !important;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.users-admin-table {
+  overflow-x: auto;
+}
+
+.users-admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-admin-table th,
+.users-admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.users-admin-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.role-badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.role-badge.admin {
+  background: #667eea;
+  color: white;
+}
+
+.role-badge.user {
+  background: #6c757d;
+  color: white;
+}

@@ -1,0 +1,531 @@
+/* Formation Detail Page Styles */
+.formation-detail {
+  background: #f8f9fa;
+}
+
+/* Hero Section */
+.formation-detail .hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0 4rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.formation-detail .hero-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.formation-detail .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: white;
+}
+
+.separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.5rem;
+}
+
+.current {
+  color: white;
+  font-weight: 500;
+}
+
+.formation-detail .hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 400px;
+  width: 100%;
+}
+
+.hero-info .category-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.formation-detail .hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.formation-detail .hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.formation-detail .hero-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.meta-item i {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Formation Detail Main Content */
+.formation-detail .main-content {
+  padding: 4rem 0;
+}
+
+.formation-detail .content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.course-details {
+  background: white;
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.detail-section {
+  margin-bottom: 3rem;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section h2 {
+  color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid #667eea;
+}
+
+.detail-section h3 {
+  color: #555;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+}
+
+.description-content p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.course-highlights ul,
+.course-objectives ul,
+.prerequisites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.course-highlights li,
+.course-objectives li,
+.prerequisites li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.course-highlights li::before,
+.course-objectives li::before,
+.prerequisites li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.program-modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.module {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.module h4 {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.module p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Sidebar */
+.course-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.enrollment-card,
+.instructor-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.price-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #667eea;
+}
+
+.price-note {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.course-info {
+  margin-bottom: 2rem;
+}
+
+.formation-detail .info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.formation-detail .info-item:last-child {
+  border-bottom: none;
+}
+
+.formation-detail .info-item strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.formation-detail .info-item span {
+  color: #666;
+}
+
+.enrollment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-large {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.btn-outline:hover {
+  background: #667eea;
+  color: white;
+}
+
+.course-features {
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  color: #555;
+}
+
+.feature i {
+  width: 20px;
+  height: 20px;
+  color: #667eea;
+}
+
+.instructor-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructor-info {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.instructor-avatar {
+  flex-shrink: 0;
+}
+
+.instructor-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.instructor-details h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.instructor-details p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.instructor-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.stat span {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Related Courses */
+.related-courses {
+  background: white;
+  padding: 4rem 0;
+}
+
+.related-courses h2 {
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.related-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+}
+
+.related-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.related-card h4 {
+  color: #333;
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem 0.5rem;
+  margin: 0;
+}
+
+.related-price {
+  color: #667eea;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 1.5rem 1.5rem;
+  margin: 0;
+}
+
+/* Error and Loading States */
+.loading-spinner {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #667eea;
+}
+
+.error-message {
+  text-align: center;
+  padding: 4rem;
+}
+
+.error-message h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.error-message p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .formation-detail .hero-content {
+    min-height: 300px;
+    padding: 2rem 1rem;
+  }
+
+  .formation-detail .hero-title {
+    font-size: 2rem;
+  }
+
+  .formation-detail .hero-meta {
+    gap: 1rem;
+  }
+
+  .meta-item {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .formation-detail .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .course-details {
+    padding: 1.5rem;
+  }
+
+  .program-modules {
+    grid-template-columns: 1fr;
+  }
+
+  .enrollment-actions {
+    flex-direction: column;
+  }
+
+  .instructor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .instructor-stats {
+    justify-content: center;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
