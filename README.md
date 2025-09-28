@@ -41,6 +41,11 @@ npm run dev
 
 Le serveur démarre sur http://localhost:5000
 
+### Documentation API
+
+La documentation Swagger est disponible à l'adresse : http://localhost:5000/api-docs
+Elle contient tous les endpoints avec leurs paramètres et exemples de réponses.
+
 ### Configuration Frontend
 
 1. Aller dans le dossier frontend :
