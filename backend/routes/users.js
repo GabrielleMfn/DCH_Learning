@@ -96,11 +96,11 @@ router.post('/inscription', async (req, res) => {
       return res.status(400).json({ error: 'Un compte existe déjà avec cet email' });
     }
 
-    // Hasher le mot de passe
+    // Hashe le mot de passe
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(mot_de_passe, saltRounds);
 
-    // Vérifier si c'est le premier utilisateur
+    // Vérifie si c'est le premier utilisateur
     const userCount = await pool.query('SELECT COUNT(*) FROM users');
     const isFirstUser = parseInt(userCount.rows[0].count) === 0;
     const role = isFirstUser ? 'admin' : 'user';
@@ -208,7 +208,7 @@ router.post('/connexion', async (req, res) => {
       return res.status(400).json({ error: 'Email et mot de passe requis' });
     }
 
-    // Récupérer l'utilisateur avec son mot de passe
+    // Récupère l'utilisateur avec son mot de passe
     const result = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
     
     if (result.rows.length === 0) {
@@ -217,14 +217,14 @@ router.post('/connexion', async (req, res) => {
 
     const user = result.rows[0];
 
-    // Vérifier le mot de passe
+    // Vérifie le mot de passe
     const isValidPassword = await bcrypt.compare(mot_de_passe, user.mot_de_passe);
     
     if (!isValidPassword) {
       return res.status(401).json({ error: 'Email ou mot de passe incorrect' });
     }
 
-    // Retourner les infos utilisateur sans le mot de passe
+    // Retourne les infos utilisateurs sans le mot de passe
     const { mot_de_passe: _, ...userWithoutPassword } = user;
 
     res.json({ 

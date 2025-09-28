@@ -3,7 +3,7 @@ const { pool } = require('../config/database');
 // Middleware pour vérifier les droits admin
 const isAdmin = async (req, res, next) => {
   try {
-    // Récupérer l'email depuis les headers, query params ou body
+    // Récupère l'email depuis les headers, query params ou body
     const email = req.headers['user-email'] || req.query.email || req.body.email;
     
     if (!email) {
@@ -30,7 +30,7 @@ const isAdmin = async (req, res, next) => {
   }
 };
 
-// Fonction pour obtenir les infos utilisateur
+// Fonction pour obtenir les infos utilisateurs
 const getUserInfo = async (email) => {
   try {
     const result = await pool.query('SELECT id, nom, email, telephone, role, created_at FROM users WHERE email = $1', [email]);

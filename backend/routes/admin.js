@@ -45,7 +45,7 @@ const router = express.Router();
  *       500:
  *         description: Erreur serveur
  */
-// Lister toutes les formations 
+// Liste toutes les formations 
 router.get('/formations', isAdmin, async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM formations ORDER BY created_at DESC');
@@ -114,7 +114,7 @@ router.get('/formations', isAdmin, async (req, res) => {
  *       500:
  *         description: Erreur serveur
  */
-// Modifier une formation 
+// Modifie une formation 
 router.put('/formations/:id', isAdmin, async (req, res) => {
   try {
     const { id } = req.params;
@@ -178,7 +178,7 @@ router.put('/formations/:id', isAdmin, async (req, res) => {
  *       500:
  *         description: Erreur serveur
  */
-// Supprimer une formation 
+// Supprime une formation 
 router.delete('/formations/:id', isAdmin, async (req, res) => {
   try {
     const { id } = req.params;
@@ -252,7 +252,7 @@ router.delete('/formations/:id', isAdmin, async (req, res) => {
  *       500:
  *         description: Erreur serveur
  */
-// Changer le statut d'une formation (publié/brouillon) 
+// Change le statut d'une formation (publié/brouillon) 
 router.patch('/formations/:id/statut', isAdmin, async (req, res) => {
   try {
     const { id } = req.params;
